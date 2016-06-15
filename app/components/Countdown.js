@@ -1,9 +1,8 @@
 import React from 'react';
 import Clock from './Clock';
+var CountdownForm = require('CountdownForm');
 
-import CountdownForm from './CountdownForm';
-
-const Countdown = React.createClass({
+var Countdown = React.createClass({
   getInitialState: function () {
     return {count: 0};
   },
@@ -12,9 +11,9 @@ const Countdown = React.createClass({
       count: seconds
     });
   },
-  render: function() {
-    let {count} = this.state;
-    
+  render: function () {
+    var {count} = this.state;
+
     return (
       <div>
         <Clock totalSeconds={count}/>
@@ -24,4 +23,4 @@ const Countdown = React.createClass({
   }
 });
 
-export default Countdown;
+module.exports = Countdown;
