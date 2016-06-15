@@ -1,10 +1,11 @@
-const webpack = require('webpack');
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './app/app.js'
+    './app/app.jsx'
   ],
   externals: {
     jquery: 'jQuery'
@@ -22,9 +23,13 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      Main: 'app/components/Main.js',
-      Countdown: 'app/components/Countdown.js',
-      CountdownForm: 'app/components/CountdownForm.js'
+      Main: 'app/components/Main.jsx',
+      applicationStyles: 'app/styles/app.scss',
+      Navigation: 'app/components/Navigation.jsx',
+      Timer: 'app/components/Timer.jsx',
+      Countdown: 'app/components/Countdown.jsx',
+      Clock: 'app/components/Clock.jsx',
+      CountdownForm: 'app/components/CountdownForm.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -40,5 +45,5 @@ module.exports = {
       }
     ]
   },
-  devtool: 'cheap-module-eval-source-map' // Automatically create source maps
+  devtool: 'cheap-module-eval-source-map'
 };
