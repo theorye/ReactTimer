@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: [
@@ -20,9 +21,14 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
-    root: __dirname,
     alias: {
-      Main: 'app/components/Main.js'
+      // Main: path.resolve(process.cwd(), 'app/components/Main.jsx' ),
+      // applicationStyles: path.resolve(process.cwd(), 'app/styles/app.scss' ),
+      // Navigation: path.resolve(process.cwd(), 'app/components/Navigation.jsx' ),
+      // Timer: path.resolve(process.cwd(), 'app/components/Timer.jsx'),
+      // Countdown: path.resolve(process.cwd(),'app/components/Countdown.jsx'),
+      // Clock: path.resolve(process.cwd(), 'app/components/Clock.jsx'),
+      CountdownForm: path.resolve(process.cwd(), 'app/components/CountdownForm.js')
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -35,6 +41,10 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },

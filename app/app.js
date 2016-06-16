@@ -11,7 +11,7 @@ import Countdown from './components/Countdown';
 import 'style!css!foundation-sites/dist/foundation.min.css';
 
 // app scss
-import 'style!css!sass!app/styles/app.scss';
+import './styles/app.scss';
 
 $(document).foundation();
 
