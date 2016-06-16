@@ -12,8 +12,8 @@ describe('CountdownForm', ()=> {
   });
 
   it('should call onSetCountdown if valid seconds entered', ()=> {
-    var spy = expect.createSpy();
-    var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
+    let spy = expect.createSpy();
+    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
 
     // jQuery way
     // var $el = $(ReactDOM.findDOMNode(countdownForm));
@@ -24,7 +24,7 @@ describe('CountdownForm', ()=> {
     // expect(spy).toHaveBeenCalledWith(109);
 
     // non jquery
-    var el = ReactDOM.findDOMNode(countdownForm);
+    let el = ReactDOM.findDOMNode(countdownForm);
 
     countdownForm.refs.seconds.value = '109';
     TestUtils.Simulate.submit(el.getElementsByClassName('countdown-form')[0]);
