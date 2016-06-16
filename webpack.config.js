@@ -17,8 +17,8 @@ module.exports = {
     })
   ],
   output: {
-    path: __dirname,
-    filename: './public/bundle.js'
+    path: __dirname + "/public/",
+    filename: 'bundle.js'
   },
   resolve: {
     alias: {
@@ -39,7 +39,7 @@ module.exports = {
         query: {
           presets: ['react', 'es2015', 'stage-0']
         },
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /(node_modules|bower_components)/
       },
       {

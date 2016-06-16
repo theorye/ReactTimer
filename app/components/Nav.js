@@ -19,7 +19,7 @@ const Nav = () => {
       <div className='top-bar-right'>
         <ul className='menu'>
           <li className='menu-text'>
-            Created By <a href="http://www.mead.io" target="_black">Adrian</a>
+            Created By <a href="http://www.mead.io" target="_black">Adriansss :)</a>
           </li>
         </ul>
 
