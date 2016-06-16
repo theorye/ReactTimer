@@ -8,7 +8,7 @@ import Timer from './components/Timer';
 import Countdown from './components/Countdown';
 
 // Load foundation
-import 'style!css!foundation-sites/dist/foundation.min.css';
+//import 'style!css!foundation-sites/dist/foundation.min.css';
 
 // app scss
 import './styles/app.scss';

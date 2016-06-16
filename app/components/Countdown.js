@@ -45,17 +45,17 @@ const Countdown = React.createClass({
       }
     }
   },
-  componentWillUpdate: function(nextProps, nextState) {
-    console.log('componentWillUpdate');
-  },
-  componentWillMount: function() {
-    console.log('componentWillMount');
-  },
-  componentDidMount: function() {
-    console.log('componentDidMount');
-  },
+  // componentWillUpdate: function(nextProps, nextState) {
+  //   console.log('componentWillUpdate');
+  // },
+  // componentWillMount: function() {
+  //   console.log('componentWillMount');
+  // },
+  // componentDidMount: function() {
+  //   console.log('componentDidMount');
+  // },
   componentWillUnmount: function() {
-    console.log('componentDidUnmount');
+    //console.log('componentDidUnmount');
     clearInterval(this.timer);
     this.timer = undefined;
   },

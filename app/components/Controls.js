@@ -12,14 +12,14 @@ const Controls = React.createClass({
     }
   },
   componentWillReceiveProps: function(newProps) {
-    console.log('componentWillReceiveProps', newProps.countdownStatus);
+    //console.log('componentWillReceiveProps', newProps.countdownStatus);
   },
   render: function() {
     let {countdownStatus} = this.props;
     let renderStartStopButton = () => {
       if(countdownStatus === 'started') {
         return <button className="button secondary" onClick={this.onStatusChange('paused')}>Pause</button>
-      } else if (countdownStatus === 'paused') {
+      } else  {
         return <button className="button primary" onClick={this.onStatusChange('started')}>Start</button>
       }
     };
